@@ -27,33 +27,43 @@ public class Bank {
 			System.out.println("Enter details of account holder " + (i + 1)); // add i + 1 because our index starts at 0.
 			System.out.println("====================================");
 			
-			// Account number input
+			
+			/*
+			 * Using the Scanner methods for each of the different type needed.
+			 * Storing the return input in temporary variables.
+			 * 		Account Number - int
+			 * 		First name - String
+			 * 		Last name - String
+			 * 		Phone number - long
+			 * 		Email - String
+			 * 		Opening balance - double
+			 */
+			// Account number
 			System.out.print("Enter account number: ");
-			int accNum = keyboard.nextInt(); // Scanner method ask user and stores input in temp var for user acc number
+			int accNum = keyboard.nextInt();
 			
-			// Account first name input
+			// Account first name
 			System.out.print("Enter first name of account holder: ");
-			String firstName = keyboard.next(); // temp var for users first name
+			String firstName = keyboard.next();
 			
-			// Account last name input
+			// Account last name
 			System.out.print("Enter last name of account holder: ");
-			String lastName = keyboard.next(); // temp var for users last name
+			String lastName = keyboard.next();
 			
 			// Account phone #
 			System.out.print("Enter phone number: ");
-			long phoneNum = keyboard.nextLong(); // temp var for users phone number
+			long phoneNum = keyboard.nextLong();
 			
 			// Account email address
 			System.out.print("Enter email address: ");
-			String emailAddress = keyboard.next(); // temp var for users email address
+			String emailAddress = keyboard.next();
 			
 			// Account opening balance
 			System.out.print("Enter opening balance: ");
-			double openingBalance = keyboard.nextDouble(); // temp var for opening balance
-			
+			double openingBalance = keyboard.nextDouble();
 			
 			// Initialize Person object
-			Person personObj = new Person(firstName, lastName, phoneNum, emailAddress);
+			Person personObj = new Person(firstName, lastName, phoneNum, emailAddress); // use temp var to pass the info to create the object with initial constructor.
 			
 			// Initialize Account object
 			accounts[i] = new Account(accNum, personObj, openingBalance);
