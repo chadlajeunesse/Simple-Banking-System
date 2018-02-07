@@ -16,7 +16,7 @@ public class BankTest {
 		// Ask user how many users are in the banking system.
 		// Amount stored in the userCount variable which is used as the size of the Account array.
 		System.out.println("How many account holders are there in your banking system: ");
-		userCount = keyboard.nextInt();
+		userCount = keyboard.nextInt(); //use the Scanner method to get size from user. Store the return value in userCount.
 		
 		// instantiate bank object.
 		Bank myBankingSystem = new Bank(bankName);
@@ -30,7 +30,7 @@ public class BankTest {
 		// Bank object method to print * info of every user in the bank system 
 		myBankingSystem.printAccountDetails(allAccounts, userCount);
 
-		// method that waits for user instructions to make deposite/ withdrawals/ print all user info or quit the program.
+		// method that waits for user instructions to make deposit/ withdrawals/ print all user info or quit the program.
 		myBankingSystem.listenForOptions(allAccounts, userCount);
 	}
 }
