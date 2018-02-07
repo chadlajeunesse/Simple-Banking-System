@@ -14,7 +14,7 @@ public class BankTest {
 		bankName = keyboard.next();
 		
 		// Ask user how many users are in the banking system.
-		// Amount stored in the userCount variable which is used as the saze of the Account array.
+		// Amount stored in the userCount variable which is used as the size of the Account array.
 		System.out.println("How many account holders are there in your banking system: ");
 		userCount = keyboard.nextInt();
 		
