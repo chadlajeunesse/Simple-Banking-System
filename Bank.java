@@ -1,14 +1,16 @@
 import java.util.Scanner;
 
 public class Bank {
+	// variables
 	private String bankName;
+	private int tempIndexNum;
 	Scanner keyboard;
 	
-	String opperation = new String("c");
-	char userOperation = opperation.charAt(0);
+	// string to be use for bank operation. 
+	String opperation = new String("c"); // set string to a value that will not stop our loop.
 	
-	//var
-	int tempIndexNum;
+	// use only the first char of the string and store it as a char.
+	char userOperation = opperation.charAt(0);
 	
 	// Initial constructor	
 	public Bank(String bankName)
@@ -22,12 +24,12 @@ public class Bank {
 		for(int i = 0; i < numAccHolder; i++)
 		{
 			// General msg indicating which user information needs to be input
-			System.out.println("Enter details of account holder " + (i + 1));
+			System.out.println("Enter details of account holder " + (i + 1)); // add i + 1 because our index starts at 0.
 			System.out.println("====================================");
 			
 			// Account number input
 			System.out.print("Enter account number: ");
-			int accNum = keyboard.nextInt(); // temp var for user acc number
+			int accNum = keyboard.nextInt(); // Scanner method ask user and stores input in temp var for user acc number
 			
 			// Account first name input
 			System.out.print("Enter first name of account holder: ");
@@ -85,7 +87,7 @@ public class Bank {
 					+ "n: Quit\n"
 					+ "Enter your option: ");
 			
-			opperation = keyboard.next();
+			opperation = keyboard.next().toLowerCase();
 			userOperation = opperation.charAt(0);
 			switch(userOperation)
 			{
