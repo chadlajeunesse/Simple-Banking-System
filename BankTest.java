@@ -3,11 +3,6 @@ import java.util.Scanner;
 public class BankTest {
 
 	public static void main(String[] args) {
-		
-		int i = 10;
-		while (i <= 10)
-			
-		System.out.println (i);
 		// variables
 		int userCount; // var used as a place holder for the amount of users that are in the bank system
 		String bankName; 
