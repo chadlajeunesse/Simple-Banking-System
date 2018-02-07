@@ -72,8 +72,10 @@ public class Bank {
 	
 	public void printAccountDetails(Account[] acc, int numRename)
 	{
-		System.out.println("\n" + bankName + "'s Banking System");
+		System.out.println("\n" + bankName + "'s Banking System"); // print name dynamicly
 		System.out.println("********************************");
+		
+		// iterate array of all accounts and display all of the users info.
 		for(int i = 0; i < numRename; i++)
 		{
 			System.out.print(
@@ -83,7 +85,7 @@ public class Bank {
 				" Email: " + acc[i].getAccHolder().getEmailAddress() + 
 				" Balance: " + acc[i].getBalance()
 			);
-			System.out.println();
+			System.out.println(); // used to print next users info on a new line.
 		}
 	}
 	
@@ -95,10 +97,11 @@ public class Bank {
 					+ "w: Withdraw\n"
 					+ "p: Print all accounts\n"
 					+ "n: Quit\n"
-					+ "Enter your option: ");
+					+ "Enter your option: "); //output user options
 			
-			opperation = keyboard.next().toLowerCase();
+			opperation = keyboard.next().toLowerCase(); // make input to be lower case for our check
 			userOperation = opperation.charAt(0);
+			
 			switch(userOperation)
 			{
 				case 'd':
@@ -122,7 +125,7 @@ public class Bank {
 					System.out.println("Good Bye");
 					break;
 				default :
-					//TODO implement what happens in default
+					// if we end up in default we have a problem
 					break;
 			}
 		}

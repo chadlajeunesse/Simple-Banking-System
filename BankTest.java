@@ -3,6 +3,7 @@ import java.util.Scanner;
 public class BankTest {
 
 	public static void main(String[] args) {
+			
 		// variables
 		int userCount; // var used as a place holder for the amount of users that are in the bank system
 		String bankName; 
