@@ -13,7 +13,7 @@ public class Account {
 	// Default constructor
 	public Account()
 	{
-		//TODO ASK Angela
+		//TODO Question:
 		// if DC is not being used is it better to create an empty DC
 		// or let it be created on its own?
 	}
@@ -21,7 +21,7 @@ public class Account {
 	// initial constructor
 	public Account(long accNumber, Person accHolder, double balance )
 	{
-		// initialize instance vars
+		// initialize instance vars.
 		this.accNumber = accNumber;
 		this.accHolder = accHolder;
 		this.balance = balance;
@@ -33,17 +33,21 @@ public class Account {
 		balance += depositAmount;
 	}
 	
+	//TODO Question: is the int return type wrong from our UML?
 	public int withdraw(double withdrawAmount)
 	{
-		if(withdrawAmount > balance)
+		if(withdrawAmount > balance) // check if amount given is more then what user has as balance
 		{
 			System.out.println("Insufficient balance");
-			return (int) balance;
+			return (int) balance; // returns the balance as int 
 		}
 		balance -= withdrawAmount;
 		return (int) balance;
 	}
 	
+	/*
+	 * Getters and setter
+	 */
 	public long getAccNumber()
 	{
 		return accNumber;
