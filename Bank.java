@@ -89,6 +89,7 @@ public class Bank {
 		}
 	}
 	
+	// method that run forever until user quits.
 	public void listenForOptions(Account[] allAccounts, int userCount)
 	{
 		while(userOperation != 'n') {
@@ -100,7 +101,8 @@ public class Bank {
 					+ "Enter your option: "); //output user options
 			
 			opperation = keyboard.next().toLowerCase(); // make input to be lower case for our check
-			userOperation = opperation.charAt(0);
+			userOperation = opperation.charAt(0); // use the first char incase user added more then one char.
+			//TODO take away initial 
 			
 			switch(userOperation)
 			{
@@ -114,7 +116,7 @@ public class Bank {
 				case 'w':
 					System.out.print("Enter account index: ");
 					tempIndexNum = keyboard.nextInt();
-					System.out.print("\n Enter deposit amount: ");
+					System.out.print("\n Enter withdrawl amount: ");
 					double tempWithdrawalAmount = keyboard.nextDouble();
 					allAccounts[tempIndexNum].withdraw(tempWithdrawalAmount);
 					break;
