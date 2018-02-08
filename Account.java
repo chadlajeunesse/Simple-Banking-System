@@ -72,4 +72,7 @@ public class Account {
 	{
 		return accHolder.getEmailAddress();
 	}
+	/*
+	 * Getters and Setters END
+	 */
 }
