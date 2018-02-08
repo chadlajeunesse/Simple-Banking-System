@@ -1,3 +1,8 @@
+/*
+ * Lab 3
+ * Created by Chad Lajeunesse
+ * Jan 29th 2018
+* */
 import java.util.Scanner;
 
 public class Bank {
