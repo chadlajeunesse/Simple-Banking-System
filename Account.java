@@ -21,6 +21,7 @@ public class Account {
 	// initial constructor
 	public Account(long accNumber, Person accHolder, double balance )
 	{
+		// initialize instance vars
 		this.accNumber = accNumber;
 		this.accHolder = accHolder;
 		this.balance = balance;
@@ -28,6 +29,7 @@ public class Account {
 	
 	public void deposit(double depositAmount)
 	{
+		// increase balance by amount given from user.
 		balance += depositAmount;
 	}
 	
