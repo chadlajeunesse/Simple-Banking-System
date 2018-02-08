@@ -11,12 +11,16 @@ public class Person {
 	// Initial constructor for all instance variable 'firstName, lastName, phoneNum, emailAddress'
 	public Person(String firstName, String lastName, long phoneNum, String emailAddress)
 	{
+		// Instantiate instance vars
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.phoneNum = phoneNum;
 		this.emailAddress = emailAddress;
 	}
 	
+	/*
+	 * Getters and Setters
+	 */
 	// Full name getter.
 	public String getName()
 	{
@@ -34,4 +38,7 @@ public class Person {
 	{
 		return emailAddress;
 	}
+	/*
+	 * Getters and Setters END
+	 */
 }
