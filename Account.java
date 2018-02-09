@@ -1,5 +1,4 @@
 /**
- * 
  * File name: Account.java
  * @author Chad Lajeunesse, 040 621 896
  * Course: CST8132-OOP

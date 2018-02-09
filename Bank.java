@@ -1,5 +1,4 @@
 /**
- * 
  * File name: Bank.java
  * @author Chad Lajeunesse, 040 621 896
  * Course: CST8132-OOP
@@ -27,9 +26,11 @@ public class Bank {
 	}
 	
 	/**
-	 * Method that does a shit load
-	 * @param accounts
-	 * @param numAccHolder
+	 * Method that creates Account objects for each user.
+	 * Asks detail info about the user.
+	 * Instantiates the Person object and uses this to Instantiate the Account object which is added in the Account array.
+	 * @param accounts passes the array of Accounts.
+	 * @param numAccHolder passes the size of users to be created. Size of array of Accounts.
 	 */
 	public void generateAccountDetails(Account[] accounts, int numAccHolder)
 	{	
@@ -82,13 +83,18 @@ public class Bank {
 		}
 	}
 	
-	public void printAccountDetails(Account[] acc, int numRename)
+	/**
+	 * Method that prints all the users along with their details.
+	 * @param acc array of Account
+	 * @param userCount size of array along with the amount of users.
+	 */
+	public void printAccountDetails(Account[] acc, int userCount)
 	{
 		System.out.println("\n" + bankName + "'s Banking System"); // print name dynamicly
 		System.out.println("********************************");
 		
 		// iterate array of all accounts and display all of the users info.
-		for(int i = 0; i < numRename; i++)
+		for(int i = 0; i < userCount; i++)
 		{
 			System.out.print(
 				"AccountNumber: " + acc[i].getAccNumber() +
@@ -101,7 +107,12 @@ public class Bank {
 		}
 	}
 	
-	// method that run forever until user quits.
+	/**
+	 * Method the listens for user input for the duration of the program
+	 * depending what input is passed different methods used.
+	 * @param allAccounts array of Account. Account objects are stored in here.
+	 * @param userCount amount of users in Account array.
+	 */
 	public void listenForOptions(Account[] allAccounts, int userCount)
 	{
 		//public variable.
@@ -123,7 +134,7 @@ public class Bank {
 			
 			opperation = keyboard.next().toLowerCase(); // make input to be lower case for our check
 			userOperation = opperation.charAt(0); // use the first char incase user added more then one char.
-			//TODO take away initial 
+			//TODO take away initial space use regex.
 			
 			switch(userOperation)
 			{
