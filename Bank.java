@@ -12,25 +12,25 @@
 import java.util.Scanner;
 
 public class Bank {
-	// variables
+	// instance variables
 	private String bankName;
-	//TODO change this to a local var
-	private int tempIndexNum;
 	Scanner keyboard;
 	
-	// string to be use for bank operation. 
-	String opperation = new String("c"); // set string to a value that will not stop our loop.
-	
-	// use only the first char of the string and store it as a char.
-	char userOperation = opperation.charAt(0);
-	
-	// Initial constructor	
+	/**
+	 * Initial constructor. Instantiates the Scanner class and sets the bankName instance variable.
+	 * @param bankName sets the instance variable.
+	 */
 	public Bank(String bankName)
 	{
 		this.bankName = bankName;
 		keyboard = new Scanner(System.in);
 	}
 	
+	/**
+	 * Method that does a shit load
+	 * @param accounts
+	 * @param numAccHolder
+	 */
 	public void generateAccountDetails(Account[] accounts, int numAccHolder)
 	{	
 		for(int i = 0; i < numAccHolder; i++)
@@ -104,6 +104,15 @@ public class Bank {
 	// method that run forever until user quits.
 	public void listenForOptions(Account[] allAccounts, int userCount)
 	{
+		//public variable.
+		int tempIndexNum;
+		
+		// string to be use for bank operation. 
+		String opperation = new String("c"); // set string to a value that will not stop our loop.
+		
+		// use only the first char of the string and store it as a char.
+		char userOperation = opperation.charAt(0);
+
 		while(userOperation != 'n') {
 			System.out.print(
 					"d: Deposit\n"
