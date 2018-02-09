@@ -4,7 +4,7 @@
  * Course: CST8132-OOP
  * Assignment: Lab 04
  * Date: February 09 2018
- * Professor: Anu Thomas & Angela Giddings
+ * Professor: Anu Thomas, Angela Giddings
  * Purpose: 
  * Class List: Bank, Scanner, Person, Account.
  */

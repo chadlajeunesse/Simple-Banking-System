@@ -1,10 +1,10 @@
 /**
- * File name: Person.java
- * @author: Chad Lajeunesse, 040 621 896
- * Course: CST8132-OOP
- * Assignment: Lab 04
- * Date: February 09 2018
- * Professor: Anu Thomas & Angela Giddings
+ * File name: Person.java<br>
+ * @author: Chad Lajeunesse, 040 621 896<br>
+ * Course: CST8132-OOP <br>
+ * Assignment: Lab 04 <br>
+ * Date: February 09 2018 <br>
+ * Professor: Anu Thomas, Angela Giddings <br>
  * Purpose: Class that has basic contact info for person.
  */
 
