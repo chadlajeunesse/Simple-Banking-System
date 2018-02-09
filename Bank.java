@@ -8,6 +8,7 @@ import java.util.Scanner;
 public class Bank {
 	// variables
 	private String bankName;
+	//TODO change this to a local var
 	private int tempIndexNum;
 	Scanner keyboard;
 	

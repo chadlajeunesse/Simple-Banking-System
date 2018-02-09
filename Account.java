@@ -1,9 +1,14 @@
-/*
- * Lab 3
- * Created by Chad Lajeunesse
- * Jan 29th 2018
-* */
- 
+/**
+ * 
+ * File name: Account.java
+ * @author Chad Lajeunesse, 040 621 896
+ * Course: CST8132-OOP
+ * Assignment: Lab 04
+ * Date: February 09 2018
+ * Professor: Anu Thomas & Angela Giddings
+ * Purpose:
+ * class List: Account, Person
+ */
 public class Account {
 	// Instance variables
 	private long accNumber;
@@ -57,22 +62,28 @@ public class Account {
 	{
 		return accHolder;
 	}
-	
+	/**
+	 * Getter method that returns the balance of the current account holder.
+	 * @return double returns the balance of current Account holder
+	 */
 	public double getBalance()
 	{
 		return balance;
 	}
-	
+	/**
+	 * Getter method that gets the name of the users whos Account we are looking at.
+	 * @return String from the Person class.
+	 */
 	public String getName()
 	{
 		return accHolder.getName();
 	}
-	
+	/**
+	 * Getter method for the user whos Account we are looking at
+	 * @return String from the Person class.
+	 */
 	public String getEmailAddress()
 	{
 		return accHolder.getEmailAddress();
 	}
-	/*
-	 * Getters and Setters END
-	 */
 }
