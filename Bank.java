@@ -1,8 +1,14 @@
-/*
- * Lab 3
- * Created by Chad Lajeunesse
- * Jan 29th 2018
-* */
+/**
+ * 
+ * File name: Bank.java
+ * @author Chad Lajeunesse, 040 621 896
+ * Course: CST8132-OOP
+ * Assignment: Lab 04
+ * Date: February 09 2018
+ * Professor: Anu Thomas & Angela Giddings
+ * Purpose: 
+ * Class List: Bank, Scanner, Person, Account.
+ */
 import java.util.Scanner;
 
 public class Bank {
