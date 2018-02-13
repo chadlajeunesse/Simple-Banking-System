@@ -9,7 +9,7 @@
  * class List: Account, Person
  */
 /**
- * Add description for Account class 
+ * This class holds the banking information of a user along with manipulate the users balance. 
  * @author Chad Lajeunesse
  * @version 1.0.0
  */
