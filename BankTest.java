@@ -1,8 +1,18 @@
 /*
- * Lab 3
- * Created by Chad Lajeunesse
- * Jan 29th 2018
-* */
+ * File name: Bank.java
+ * @author Chad Lajeunesse, 040 621 896
+ * Course: CST8132-OOP
+ * Assignment: Lab 04
+ * Date: February 09 2018
+ * Professor: Anu Thomas, Angela Giddings
+ * Purpose: 
+ * Class List: Bank, Scanner, Account.
+ */
+/**
+ * Add a description
+ * @author Chad Lajeunesse
+ * @version 1.0
+ */
 import java.util.Scanner;
 
 public class BankTest {
@@ -21,9 +31,10 @@ public class BankTest {
 		
 		// Ask user how many users are in the banking system.
 		// Amount stored in the userCount variable which is used as the size of the Account array.
-		System.out.println("How many account holders are there in your banking system: ");
-		userCount = keyboard.nextInt(); //use the Scanner method to get size from user. Store the return value in userCount.
-		
+		do {
+			System.out.println("How many account holders are there in your banking system: ");
+			userCount = keyboard.nextInt(); //use the Scanner method to get size from user. Store the return value in userCount.
+		}while(userCount <= 0);
 		// instantiate bank object.
 		Bank myBankingSystem = new Bank(bankName);
 		

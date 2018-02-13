@@ -1,4 +1,4 @@
-/**
+/*
  * File name: Bank.java
  * @author Chad Lajeunesse, 040 621 896
  * Course: CST8132-OOP
@@ -8,12 +8,25 @@
  * Purpose: 
  * Class List: Bank, Scanner, Person, Account.
  */
+/**
+ * Add description for Bank class
+ * @author Chad Lajeunesse
+ * @version 1.0
+ */
 import java.util.Scanner;
 
 public class Bank {
 	// instance variables
 	private String bankName;
 	Scanner keyboard;
+	
+	public Bank() {
+		
+		// prompt user here
+		// get name
+		
+		
+	}
 	
 	/**
 	 * Initial constructor. Instantiates the Scanner class and sets the bankName instance variable.
@@ -141,16 +154,34 @@ public class Bank {
 				case 'd':
 					System.out.print("Enter account index: ");
 					tempIndexNum = keyboard.nextInt();
+					
+					while(userCount-1 < tempIndexNum || tempIndexNum < 0){
+						System.out.print("Please enter an index lower then " + userCount + ": ");
+						tempIndexNum = keyboard.nextInt();
+					}
+					
 					System.out.print("\nEnter deposit amount: ");
 					double tempDepositAmount = keyboard.nextDouble();
 					allAccounts[tempIndexNum].deposit(tempDepositAmount);
+					
 					break;
 				case 'w':
-					System.out.print("Enter account index: ");
+					System.out.println("Enter account index: ");
 					tempIndexNum = keyboard.nextInt();
+					
+					while(userCount - 1 < tempIndexNum || tempIndexNum < 0) {
+						System.out.print("Plese enter an index lower then " + userCount + ": ");
+						tempIndexNum = keyboard.nextInt();
+					}
+					
 					System.out.print("\n Enter withdrawl amount: ");
 					double tempWithdrawalAmount = keyboard.nextDouble();
-					allAccounts[tempIndexNum].withdraw(tempWithdrawalAmount);
+					
+					int isInsuficientFunds = allAccounts[tempIndexNum].withdraw(tempWithdrawalAmount);
+
+					if(isInsuficientFunds == -1) {
+						System.out.println("Insufficient balance");
+					}
 					break;
 				case 'p':
 					printAccountDetails(allAccounts, userCount);

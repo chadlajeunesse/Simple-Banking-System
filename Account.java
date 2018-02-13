@@ -1,12 +1,17 @@
-/**
+/*
  * File name: Account.java
- * @author Chad Lajeunesse, 040 621 896
+ * Author Chad Lajeunesse, 040 621 896
  * Course: CST8132-OOP
  * Assignment: Lab 04
  * Date: February 09 2018
  * Professor: Anu Thomas, Angela Giddings
  * Purpose:
  * class List: Account, Person
+ */
+/**
+ * Add description for Account class 
+ * @author Chad Lajeunesse
+ * @version 1.0.0
  */
 public class Account {
 	/**
@@ -15,14 +20,6 @@ public class Account {
 	private long accNumber;
 	private Person accHolder;
 	private double balance;
-	
-	// Default constructor
-	public Account()
-	{
-		//TODO Question:
-		// if DC is not being used is it better to create an empty DC
-		// or let it be created on its own?
-	}
 	
 	/**
 	 * Initial constructor that sets the instance variables.
@@ -46,7 +43,6 @@ public class Account {
 		balance += depositAmount;
 	}
 	
-	//TODO Question: is the int return type wrong from our UML?
 	/**
 	 * Method that withdraws money from the current Account.
 	 * A check is done to ensure that there is enough funds in the account before withdrawing the funds.
@@ -57,11 +53,11 @@ public class Account {
 	{
 		if(withdrawAmount > balance) // check if amount given is more then what user has as balance
 		{
-			System.out.println("Insufficient balance");
-			return (int) balance; // returns the balance as int 
+			return -1; // returns -1 to indicate there is not enough funds in the account
 		}
+		
 		balance -= withdrawAmount;
-		return (int) balance;
+		return 0;
 	}
 	/**
 	 * Getter method for the current Account holder. 
@@ -81,7 +77,7 @@ public class Account {
 	}
 	/**
 	 * Getter method that returns the balance of the current account holder.
-	 * @return double returns the balance of current Account holder.
+	 * @return double Returns the balance of current Account holder.
 	 */
 	public double getBalance()
 	{
