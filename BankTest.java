@@ -8,21 +8,30 @@
  * Purpose: 
  * Class List: Bank, Scanner, Account.
  */
+import java.util.Scanner;
 /**
- * Add a description
+ * Driver class that is used to initiate the program.
  * @author Chad Lajeunesse
  * @version 1.0
  */
-import java.util.Scanner;
-
 public class BankTest {
-
+	/**
+	 * Initial method that starts our program by calling respective classes.
+	 * @param args List of parameters that can be passed in the program. Not being used.
+	 */
 	public static void main(String[] args) {
 			
-		// variables
+		/**
+		 * Place holder that holds number of users.
+		 */
 		int userCount; // var used as a place holder for the amount of users that are in the bank system
+		/**
+		 * Place holder for the bank name.
+		 */
 		String bankName; 
-		
+		/**
+		 * Place holder to hold the Scanner object.
+		 */
 		Scanner keyboard = new Scanner(System.in); //Scanner object to gather users input
 		
 		// Ask user for the name of the bank. Stored in the bankName var.
@@ -36,6 +45,7 @@ public class BankTest {
 			userCount = keyboard.nextInt(); //use the Scanner method to get size from user. Store the return value in userCount.
 		}while(userCount <= 0);
 		// instantiate bank object.
+		
 		Bank myBankingSystem = new Bank(bankName);
 		
 		// Create array of type Account and allocate proper array size.

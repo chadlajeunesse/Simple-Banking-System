@@ -8,29 +8,25 @@
  * Purpose: 
  * Class List: Bank, Scanner, Person, Account.
  */
+import java.util.Scanner;
 /**
- * Add description for Bank class
+ * Creates the accounts for all the users, 
  * @author Chad Lajeunesse
  * @version 1.0
  */
-import java.util.Scanner;
-
 public class Bank {
-	// instance variables
+	/**
+	 * Place holder for the bank name.
+	 */
 	private String bankName;
+	/**
+	 * place holder for the Scanner object.
+	 */
 	Scanner keyboard;
-	
-	public Bank() {
-		
-		// prompt user here
-		// get name
-		
-		
-	}
 	
 	/**
 	 * Initial constructor. Instantiates the Scanner class and sets the bankName instance variable.
-	 * @param bankName sets the instance variable.
+	 * @param bankName Passed from the user to set the bank name.
 	 */
 	public Bank(String bankName)
 	{
@@ -39,11 +35,10 @@ public class Bank {
 	}
 	
 	/**
-	 * Method that creates Account objects for each user.
-	 * Asks detail info about the user.
-	 * Instantiates the Person object and uses this to Instantiate the Account object which is added in the Account array.
-	 * @param accounts passes the array of Accounts.
-	 * @param numAccHolder passes the size of users to be created. Size of array of Accounts.
+	 * Method that creates an Account objects for each user and at the same time creates a Person object.
+	 * Instantiates the Person object and uses this to Instantiate the Account object which is then added to the array.
+	 * @param accounts Array of type Account that is used to store each Account object.
+	 * @param numAccHolder The amount of users that will be created.
 	 */
 	public void generateAccountDetails(Account[] accounts, int numAccHolder)
 	{	
@@ -53,17 +48,6 @@ public class Bank {
 			System.out.println("Enter details of account holder " + (i + 1)); // add i + 1 because our index starts at 0.
 			System.out.println("====================================");
 			
-			
-			/*
-			 * Using the Scanner methods for each of the different type needed.
-			 * Storing the return input in temporary variables.
-			 * 		Account Number - int
-			 * 		First name - String
-			 * 		Last name - String
-			 * 		Phone number - long
-			 * 		Email - String
-			 * 		Opening balance - double
-			 */
 			// Account number
 			System.out.print("Enter account number: ");
 			int accNum = keyboard.nextInt();
@@ -97,13 +81,13 @@ public class Bank {
 	}
 	
 	/**
-	 * Method that prints all the users along with their details.
-	 * @param acc array of Account
-	 * @param userCount size of array along with the amount of users.
+	 * Method that prints every users information.
+	 * @param acc The array of Accounts that holds each Account object.
+	 * @param userCount Number of users.
 	 */
 	public void printAccountDetails(Account[] acc, int userCount)
 	{
-		System.out.println("\n" + bankName + "'s Banking System"); // print name dynamicly
+		System.out.println("\n" + bankName + "'s Banking System"); // print name dynamically by using the bankName variable.
 		System.out.println("********************************");
 		
 		// iterate array of all accounts and display all of the users info.
@@ -122,9 +106,9 @@ public class Bank {
 	
 	/**
 	 * Method the listens for user input for the duration of the program
-	 * depending what input is passed different methods used.
-	 * @param allAccounts array of Account. Account objects are stored in here.
-	 * @param userCount amount of users in Account array.
+	 * depending what input is passed different methods are use.
+	 * @param allAccounts Array of Account Objects.
+	 * @param userCount Amount of users.
 	 */
 	public void listenForOptions(Account[] allAccounts, int userCount)
 	{
@@ -147,6 +131,7 @@ public class Bank {
 			
 			opperation = keyboard.next().toLowerCase(); // make input to be lower case for our check
 			userOperation = opperation.charAt(0); // use the first char incase user added more then one char.
+			
 			//TODO take away initial space use regex.
 			
 			switch(userOperation)

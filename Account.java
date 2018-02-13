@@ -5,7 +5,7 @@
  * Assignment: Lab 04
  * Date: February 09 2018
  * Professor: Anu Thomas, Angela Giddings
- * Purpose: This class allows basic functionality to adjust a users account balance by deposting and withdrawing funds.
+ * Purpose: This class allows basic functionality to adjust a users account balance by depositing and withdrawing funds.
  * class List: Account, Person
  */
 /**
@@ -38,32 +38,6 @@ public class Account {
 		this.accNumber = accNumber;
 		this.accHolder = accHolder;
 		this.balance = balance;
-	}
-	
-	/**
-	 * Setter method that increases the balance of the current Account holder.
-	 * @param depositAmount This amount is used to increase the current balance.
-	 */
-	public void deposit(double depositAmount)
-	{
-		balance += depositAmount;
-	}
-	
-	/**
-	 * Method that subtracts an amount that is passed from a user from the current balance. If the amount that is passed from the user is
-	 * greater then the current balance no subtraction is perform.
-	 * @param withdrawAmount The amount the user is trying to withdraw. 
-	 * @return int If the withdraw amount is less then the current balance 0 is returned. If the withdraw amount is more then the current balance -1 is return.
-	 */
-	public int withdraw(double withdrawAmount)
-	{
-		if(withdrawAmount > balance) // check if amount given is more then what user has as balance
-		{
-			return -1; // returns -1 to indicate there is not enough funds in the account
-		}
-		
-		balance -= withdrawAmount;
-		return 0;
 	}
 	/**
 	 * Getter method for the account holders account number.
@@ -104,5 +78,31 @@ public class Account {
 	public String getEmailAddress()
 	{
 		return accHolder.getEmailAddress();
+	}
+	
+	/**
+	 * Method that increases the balance of the current Account holder.
+	 * @param depositAmount This amount is used to increase the current balance.
+	 */
+	public void deposit(double depositAmount)
+	{
+		balance += depositAmount;
+	}
+	
+	/**
+	 * Method that subtracts an amount that is passed from a user from the current balance. If the amount that is passed from the user is
+	 * greater then the current balance no subtraction is perform.
+	 * @param withdrawAmount The amount the user is trying to withdraw. 
+	 * @return int If the withdraw amount is less then the current balance 0 is returned. If the withdraw amount is more then the current balance -1 is return.
+	 */
+	public int withdraw(double withdrawAmount)
+	{
+		if(withdrawAmount > balance) // check if amount given is more then what user has as balance
+		{
+			return -1; // returns -1 to indicate there is not enough funds in the account
+		}
+		
+		balance -= withdrawAmount;
+		return 0;
 	}
 }
