@@ -15,17 +15,23 @@
  */
 public class Account {
 	/**
-	 * 
+	 * Place holder for the account number.
 	 */
 	private long accNumber;
+	/**
+	 * Place holder for the account holder.
+	 */
 	private Person accHolder;
+	/**
+	 * Place holder for the account balance.
+	 */
 	private double balance;
 	
 	/**
 	 * Initial constructor that sets the instance variables.
-	 * @param accNumber sets the instance variable of accNumber
-	 * @param accHolder Person object that is set to the instance variable
-	 * @param balance initial balance the is set.
+	 * @param accNumber Used to set the current account number.
+	 * @param accHolder Sets the Person object that is set to the instance variable.
+	 * @param balance Used to set the initial balance.
 	 */
 	public Account(long accNumber, Person accHolder, double balance )
 	{
@@ -36,7 +42,7 @@ public class Account {
 	
 	/**
 	 * Setter method that increases the balance of the current Account holder.
-	 * @param depositAmount which is a double that is used to increase the balance.
+	 * @param depositAmount This amount is used to increase the current balance.
 	 */
 	public void deposit(double depositAmount)
 	{
@@ -44,8 +50,8 @@ public class Account {
 	}
 	
 	/**
-	 * Method that withdraws money from the account holder. A simple check is performed to see if the funds being
-	 * withdrawn are less or equal to the current balance.
+	 * Method that subtracts an amount that is passed from a user from the current balance. If the amount that is passed from the user is
+	 * greater then the current balance no subtraction is perform.
 	 * @param withdrawAmount The amount the user is trying to withdraw. 
 	 * @return int If the withdraw amount is less then the current balance 0 is returned. If the withdraw amount is more then the current balance -1 is return.
 	 */
