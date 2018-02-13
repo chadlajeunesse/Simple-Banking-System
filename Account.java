@@ -5,7 +5,7 @@
  * Assignment: Lab 04
  * Date: February 09 2018
  * Professor: Anu Thomas, Angela Giddings
- * Purpose:
+ * Purpose: This class allows basic functionality to adjust a users account balance by deposting and withdrawing funds.
  * class List: Account, Person
  */
 /**
@@ -44,10 +44,10 @@ public class Account {
 	}
 	
 	/**
-	 * Method that withdraws money from the current Account.
-	 * A check is done to ensure that there is enough funds in the account before withdrawing the funds.
-	 * @param withdrawAmount which is of type double
-	 * @return int of the balance of the current Account after the money has been withdrawn.
+	 * Method that withdraws money from the account holder. A simple check is performed to see if the funds being
+	 * withdrawn are less or equal to the current balance.
+	 * @param withdrawAmount The amount the user is trying to withdraw. 
+	 * @return int If the withdraw amount is less then the current balance 0 is returned. If the withdraw amount is more then the current balance -1 is return.
 	 */
 	public int withdraw(double withdrawAmount)
 	{
@@ -60,8 +60,8 @@ public class Account {
 		return 0;
 	}
 	/**
-	 * Getter method for the current Account holder. 
-	 * @return long for the current Account holders account number.
+	 * Getter method for the account holders account number.
+	 * @return long Returns the account holders account number.
 	 */
 	public long getAccNumber()
 	{
@@ -69,31 +69,31 @@ public class Account {
 	}
 	/**
 	 * Getter method that returns the Person object.
-	 * @return Person object of the current Account holder.
+	 * @return Person Returns an object of the Person class.
 	 */
 	public Person getAccHolder()
 	{
 		return accHolder;
 	}
 	/**
-	 * Getter method that returns the balance of the current account holder.
-	 * @return double Returns the balance of current Account holder.
+	 * Getter method that returns the account holders balance.
+	 * @return double Returns the balance of the current Account holder.
 	 */
 	public double getBalance()
 	{
 		return balance;
 	}
 	/**
-	 * Getter method that gets the name of the users whos Account we are looking at.
-	 * @return String from the Person class.
+	 * Getter method that gets the account holders first and last name.
+	 * @return String Returns the account holders full name.
 	 */
 	public String getName()
 	{
 		return accHolder.getName();
 	}
 	/**
-	 * Getter method for the user whos Account we are looking at.
-	 * @return String from the Person class.
+	 * Getter method for the account holder. A getter method from the Person class is called to get t
+	 * @return String Returns the account holders email address.
 	 */
 	public String getEmailAddress()
 	{
